@@ -91,6 +91,8 @@ export default tseslint.config(
       'unicorn/no-static-only-class': 'off',
       'unicorn/prefer-module': 'off',
       'unicorn/expiring-todo-comments': 'off',
+      'unicorn/no-keyword-prefix': 'off'
+
     },
   },
   {

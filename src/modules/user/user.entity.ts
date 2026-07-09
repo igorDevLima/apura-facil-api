@@ -1,4 +1,12 @@
-import { Column, Entity, OneToMany, OneToOne, VirtualColumn } from 'typeorm';
+import { ClassEntity } from 'modules/class/class.entity.ts';
+import {
+  Column,
+  Entity,
+  ManyToMany,
+  OneToMany,
+  OneToOne,
+  VirtualColumn,
+} from 'typeorm';
 
 import { AbstractEntity } from '../../common/abstract.entity.ts';
 import { RoleType } from '../../constants/role-type.ts';
@@ -43,4 +51,7 @@ export class UserEntity extends AbstractEntity<UserDto, UserDtoOptions> {
 
   @OneToMany(() => PostEntity, (postEntity) => postEntity.user)
   posts?: PostEntity[];
+
+  @ManyToMany(() => ClassEntity, (entity) => entity.users)
+  classes?: ClassEntity[];
 }
