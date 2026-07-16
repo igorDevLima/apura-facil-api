@@ -1,7 +1,6 @@
 import {
   EmailField,
   PasswordField,
-  PhoneFieldOptional,
   StringField,
 } from '../../../decorators/field.decorators.ts';
 
@@ -17,7 +16,4 @@ export class UserRegisterDto {
 
   @PasswordField({ minLength: 6 })
   readonly password!: string;
-
-  @PhoneFieldOptional()
-  phone?: string;
 }

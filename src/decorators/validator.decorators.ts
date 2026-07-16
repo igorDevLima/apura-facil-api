@@ -1,9 +1,5 @@
 import type { ValidationOptions } from 'class-validator';
-import {
-  IsPhoneNumber as isPhoneNumber,
-  registerDecorator,
-  ValidateIf,
-} from 'class-validator';
+import { registerDecorator, ValidateIf } from 'class-validator';
 import _ from 'lodash';
 
 export function IsPassword(
@@ -23,17 +19,6 @@ export function IsPassword(
       },
     });
   };
-}
-
-export function IsPhoneNumber(
-  validationOptions?: ValidationOptions & {
-    region?: Parameters<typeof isPhoneNumber>[0];
-  },
-): PropertyDecorator {
-  return isPhoneNumber(validationOptions?.region, {
-    message: 'error.phoneNumber',
-    ...validationOptions,
-  });
 }
 
 export function IsTmpKey(

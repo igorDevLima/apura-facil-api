@@ -7,9 +7,11 @@ export type Plain<T> = T extends Date | ((...args: never[]) => unknown)
     ? Array<Plain<U>>
     : T extends object
       ? {
-          [K in keyof T as T[K] extends (...args: never[]) => unknown
-            ? never
-            : K]: Plain<T[K]>;
+          [
+            K in keyof T as T[K] extends (...args: never[]) => unknown
+              ? never
+              : K
+          ]: Plain<T[K]>;
         }
       : T;
 

@@ -75,7 +75,6 @@ export class UserService {
       user.id,
       plainToClass(CreateSettingsDto, {
         isEmailVerified: false,
-        isPhoneVerified: false,
       }),
     );
 

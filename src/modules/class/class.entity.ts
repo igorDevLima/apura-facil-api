@@ -9,7 +9,7 @@ import { ClassDto } from './dtos/class.dto.ts';
 @UseDto(ClassDto)
 export class ClassEntity extends AbstractEntity<ClassDto> {
   @Column({ nullable: false, type: 'varchar' })
-  name?: string;
+  name!: string;
 
   @ManyToMany(() => UserEntity, (user) => user.classes)
   @JoinTable({

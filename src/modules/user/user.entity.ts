@@ -34,9 +34,6 @@ export class UserEntity extends AbstractEntity<UserDto, UserDtoOptions> {
   @Column({ nullable: true, type: 'varchar' })
   password!: string | null;
 
-  @Column({ nullable: true, type: 'varchar' })
-  phone!: string | null;
-
   @Column({ nullable: true, type: 'boolean', default: false })
   isEducator!: boolean;
 

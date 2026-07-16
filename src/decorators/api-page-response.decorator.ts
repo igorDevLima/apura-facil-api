@@ -27,6 +27,6 @@ export function ApiPageResponse<T extends Type>(options: {
           },
         ],
       },
-    } as ApiResponseOptions | undefined),
+    }),
   );
 }

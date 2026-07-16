@@ -4,7 +4,6 @@ import {
   BooleanFieldOptional,
   EmailFieldOptional,
   EnumFieldOptional,
-  PhoneFieldOptional,
   StringFieldOptional,
 } from '../../../decorators/field.decorators.ts';
 import type { UserEntity } from '../user.entity.ts';
@@ -27,9 +26,6 @@ export class UserDto extends AbstractDto {
   @EmailFieldOptional({ nullable: true })
   email?: string | null;
 
-  @PhoneFieldOptional({ nullable: true })
-  phone?: string | null;
-
   @BooleanFieldOptional()
   isActive?: boolean;
 
@@ -42,7 +38,6 @@ export class UserDto extends AbstractDto {
     this.lastName = user.lastName;
     this.role = user.role;
     this.email = user.email;
-    this.phone = user.phone;
     this.isEducator = user.isEducator;
     this.isActive = options?.isActive;
   }

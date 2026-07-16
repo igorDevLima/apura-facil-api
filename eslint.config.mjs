@@ -3,12 +3,12 @@
 import eslint from '@eslint/js';
 import stylisticPlugin from '@stylistic/eslint-plugin';
 import canonicalPlugin from 'eslint-plugin-canonical';
+import importPlugin from 'eslint-plugin-import';
 import nPlugin from 'eslint-plugin-n';
 import prettierPlugin from 'eslint-plugin-prettier/recommended';
-import sonarjsPlugin from 'eslint-plugin-sonarjs';
 import promisePlugin from 'eslint-plugin-promise';
 import simpleImportSort from 'eslint-plugin-simple-import-sort';
-import importPlugin from 'eslint-plugin-import';
+import sonarjsPlugin from 'eslint-plugin-sonarjs';
 import unicornPlugin from 'eslint-plugin-unicorn';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
@@ -65,14 +65,18 @@ export default tseslint.config(
     extends: [importPlugin.flatConfigs.typescript],
     rules: {
       'eslintComments/no-use': 'off',
-      // 'import/extensions': ['error', 'always', {ignorePackages: true}],
-      // 'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
-      // "importPlugin/no-unresolved": ["error", {
-      //   ignore: ["^@hr-drone/*", "^firebase-admin/.+"],
-      // }],
+      /*
+       * 'import/extensions': ['error', 'always', {ignorePackages: true}],
+       * 'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
+       * "importPlugin/no-unresolved": ["error", {
+       *   ignore: ["^@hr-drone/*", "^firebase-admin/.+"],
+       * }],
+       */
 
-      // "importPlugin/no-duplicates": ["error"],
-      // "importPlugin/consistent-type-specifier-style": ["error", "prefer-top-level"],
+      /*
+       * "importPlugin/no-duplicates": ["error"],
+       * "importPlugin/consistent-type-specifier-style": ["error", "prefer-top-level"],
+       */
     },
   },
   {
@@ -91,8 +95,7 @@ export default tseslint.config(
       'unicorn/no-static-only-class': 'off',
       'unicorn/prefer-module': 'off',
       'unicorn/expiring-todo-comments': 'off',
-      'unicorn/no-keyword-prefix': 'off'
-
+      'unicorn/no-keyword-prefix': 'off',
     },
   },
   {
@@ -329,7 +332,7 @@ export default tseslint.config(
 
       'arrow-body-style': 'error',
       'arrow-parens': ['error', 'always'],
-      complexity: 'off',
+      "complexity": 'off',
 
       'no-restricted-imports': [
         'error',
@@ -349,12 +352,12 @@ export default tseslint.config(
       'no-else-return': 'error',
       'no-implicit-coercion': 'error',
       'constructor-super': 'error',
-      yoda: 'error',
-      strict: ['error', 'never'],
-      curly: 'error',
+      "yoda": 'error',
+      "strict": ['error', 'never'],
+      "curly": 'error',
       'dot-notation': 'error',
       'eol-last': 'error',
-      eqeqeq: ['error', 'smart'],
+      "eqeqeq": ['error', 'smart'],
       'guard-for-in': 'error',
       'id-match': 'error',
       'max-classes-per-file': 'off',
@@ -437,7 +440,7 @@ export default tseslint.config(
       'prefer-const': 'error',
       'prefer-object-spread': 'error',
       'quote-props': ['error', 'consistent-as-needed'],
-      radix: 'error',
+      "radix": 'error',
       'use-isnan': 'error',
       'valid-typeof': 'off',
       'space-before-function-paren': 'off',
