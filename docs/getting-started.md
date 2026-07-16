@@ -223,7 +223,6 @@ After creating your project, complete these steps:
 ### 4. Development Environment
 - [ ] Configure your IDE/editor with TypeScript support
 - [ ] Install recommended extensions (ESLint, Biome)
-- [ ] Set up git hooks (Husky is pre-configured)
 
 ## Environment Configuration
 

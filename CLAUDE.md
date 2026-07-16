@@ -90,8 +90,6 @@ fix(auth): handle expired refresh tokens
 chore(deps): upgrade typeorm to 0.3.21
 ```
 
-Pre-commit hooks (Husky + lint-staged) automatically run Biome + ESLint on staged `.ts` files.
-
 ## Environment Setup
 
 Copy `.env.example` to `.env`. Key vars to configure:

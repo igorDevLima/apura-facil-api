@@ -13,7 +13,6 @@ import { ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { RoleType } from '../../constants/role-type.ts';
 import { AuthUser } from '../../decorators/auth-user.decorator.ts';
 import { Auth } from '../../decorators/http.decorators.ts';
-import { ApiFile } from '../../decorators/swagger.schema.ts';
 import type { IFile } from '../../interfaces/IFile.ts';
 import type { Reference } from '../../types.ts';
 import { UserDto } from '../user/dtos/user.dto.ts';

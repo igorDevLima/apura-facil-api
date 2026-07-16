@@ -1,5 +1,5 @@
 FROM node:25-slim AS base
-RUN corepack enable
+RUN npm install -g pnpm@10.26.2
 
 # --- Build stage: compile TypeScript ---
 FROM base AS build

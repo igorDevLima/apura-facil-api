@@ -435,7 +435,6 @@ export class ApiConfigService {
 
 ### Development Tools
 - **Biome + ESLint**: Code linting and formatting
-- **Husky**: Git hooks for code quality
 - **Docker**: Containerized development environment
 - **Swagger**: API documentation generation
 
